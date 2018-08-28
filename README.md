@@ -82,12 +82,12 @@ client
 ⋅⋅⋅⋅components/ * where components live
 ⋅⋅⋅⋅⋅⋅components.js * components entry file
 ⋅⋅⋅⋅⋅⋅home/ * home component
-⋅⋅⋅⋅⋅⋅⋅⋅home.js * home entry file (routes, configurations, and declarations occur here)
-⋅⋅⋅⋅⋅⋅⋅⋅home.component.js * home "directive"
-⋅⋅⋅⋅⋅⋅⋅⋅home.controller.js * home controller
+⋅⋅⋅⋅⋅⋅⋅⋅post.js * home entry file (routes, configurations, and declarations occur here)
+⋅⋅⋅⋅⋅⋅⋅⋅post.component.js * home "directive"
+⋅⋅⋅⋅⋅⋅⋅⋅post.controller.js * home controller
 ⋅⋅⋅⋅⋅⋅⋅⋅home.scss * home styles
 ⋅⋅⋅⋅⋅⋅⋅⋅home.html * home template
-⋅⋅⋅⋅⋅⋅⋅⋅home.spec.js * home specs (for entry, component, and controller)
+⋅⋅⋅⋅⋅⋅⋅⋅post.spec.js * home specs (for entry, component, and controller)
 ```
 
 ## Testing Setup

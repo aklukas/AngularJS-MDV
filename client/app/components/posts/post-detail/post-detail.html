@@ -1,0 +1,13 @@
+<h1>Detail</h1>
+<form ng-submit="$ctrl.savePost({thisForm: $ctrl.myForm})">
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="Username" ng-model="$ctrl.myForm.name" name="name">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="Text">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="Text">
+  </div>
+  <button class="btn btn-primary" type="submit">Create</button>
+</form>

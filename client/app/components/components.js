@@ -1,9 +1,9 @@
 import angular from 'angular';
-import Home from './home/home';
+import Post from './posts/post';
 import About from './about/about';
 
 let componentModule = angular.module('app.components', [
-  Home,
+  Post,
   About
 ])
 
