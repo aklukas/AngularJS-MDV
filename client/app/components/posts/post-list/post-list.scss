@@ -1,3 +1,7 @@
-.post-list {
-  color: red;
+
+li {
+  &:hover {
+    cursor: pointer;
+    color: white;
+  }
 }

@@ -1,13 +1,12 @@
 <h1>Detail</h1>
-<form ng-submit="$ctrl.savePost({thisForm: $ctrl.myForm})">
+<form ng-submit="$ctrl.savePost({myform: $ctrl.form})">
   <div class="form-group">
-    <input class="form-control" type="text" placeholder="Username" ng-model="$ctrl.myForm.name" name="name">
+    <input class="form-control" type="text" placeholder="Username" ng-model="$ctrl.form.username" name="name">
   </div>
   <div class="form-group">
-    <input class="form-control" type="text" placeholder="Text">
+    <textarea class="form-control" type="text" placeholder="Post" ng-model="$ctrl.form.content"></textarea>
   </div>
-  <div class="form-group">
-    <input class="form-control" type="text" placeholder="Text">
-  </div>
-  <button class="btn btn-primary" type="submit">Create</button>
+  <button ng-if="!$ctrl.form.id" class="btn btn-primary" type="submit">Create</button>
+  <button ng-if="$ctrl.form.id" class="btn btn-primary" type="submit">Save</button>
+  <button class="btn btn-primary" type="button" ng-click="$ctrl.resetForm()">Reset</button>
 </form>

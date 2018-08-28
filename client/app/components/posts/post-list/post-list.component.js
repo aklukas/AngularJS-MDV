@@ -4,7 +4,9 @@ import './post-list.scss';
 
 let PostListComponent = {
   bindings: {
-    posts: '<'
+    posts: '<',
+    selectedPost: '&',
+    deletePost: '&'
   },
   template,
   controller

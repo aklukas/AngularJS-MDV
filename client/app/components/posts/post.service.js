@@ -13,7 +13,14 @@ class PostService {
 
   createPost(post) {
     return this.http.post(this.url, post);
-    console.log('CREATE POST')
+  }
+
+  updatePost(post) {
+    return this.http.patch(`${this.url}/${post.id}`, post);
+  }
+
+  deletePost(post) {
+    return this.http.delete(`${this.url}/${post.id}`)
   }
 }
 

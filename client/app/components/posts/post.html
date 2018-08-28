@@ -1,14 +1,17 @@
 <navbar></navbar>
 
-<div class="container wrapper">
+<div class="container">
   <post-list
-    class="content-left"
-    posts="$ctrl.posts">
+    class="col-lg-5"
+    posts="$ctrl.posts"
+    selected-post="$ctrl.selectedPost(post)"
+    delete-post="$ctrl.deletePost(post)">
   </post-list>
 
   <post-detail
-    class="content-right"
-    my-form="$ctrl.form"
-    save-post="thisForm.newPost(form)">
+    class="col-lg-5"
+    form="$ctrl.form"
+    save-post="$ctrl.savePost(myform)"
+    reset-form="$ctrl.resetForm()">
   </post-detail>
 </div>

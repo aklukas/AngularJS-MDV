@@ -17,12 +17,38 @@ class PostController {
       .catch(error => console.log('error', error));
   }
 
+  selectedPost(post) {
+    this.form = Object.assign({}, post);
+  }
+
+  savePost(form) {
+    if(form.id) {
+      this.editPost(form)
+    } else {
+      this.newPost(form);
+    }
+  }
+
   newPost(form) {
-    console.log('POSTED!!!', form)
-    // this.postService.createPost()
-    //   .then(res => this.allPosts())
-    //   .catch(error => console.log('error', error));
+    this.postService.createPost(form)
+      .then(() => this.allPosts())
+      .catch(error => console.log('error', error))
+      .finally(() => this.resetForm());
   };
+
+  editPost(form) {
+    this.postService.updatePost(form)
+      .then(() => this.allPosts())
+      .catch(error => console.log('error', error))
+      .finally(() => this.resetForm());
+  }
+
+  deletePost(id) {
+    this.postService.deletePost(id)
+      .then(() => this.allPosts())
+      .catch(error => console.log('error', error))
+      .finally(() => this.resetForm());
+  }
 
   resetForm() {
     this.form = {

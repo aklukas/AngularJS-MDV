@@ -3,8 +3,9 @@ import controller from './post-detail.controller';
 import './post-detail.scss';
 
 let bindings = {
-  myForm: '<',
-  savePost: '&'
+  form: '<',
+  savePost: '&',
+  resetForm: '&'
 };
 
 let postDetailComponent = {
